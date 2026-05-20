@@ -47,7 +47,7 @@ body {
  
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 0 0 32px 0; /* espaço embaixo para os links ficarem mais baixos */
+  padding: 0 0 32px 0;
 }
 
 .nav-container {
@@ -56,8 +56,8 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* alinha os links na parte de baixo */
-  padding-top: 28px;     /* empurra tudo para baixo dentro da navbar */
+  align-items: flex-end; 
+  padding-top: 28px;    
 }
 
 /* ===== LINKS ===== */
