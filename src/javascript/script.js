@@ -1,64 +1,82 @@
-/* ===== MENU MOBILE ===== */
-const toggle = document.getElementById('menu-toggle');
-const links  = document.getElementById('nav-links');
+const slides = document.querySelectorAll('.slide');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+const dotsContainer = document.getElementById('slider-dots');
 
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('open');
-  links.classList.toggle('ativo');
-});
-links.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    toggle.classList.remove('open');
-    links.classList.remove('ativo');
-  });
-});
+let current = 0;
 
-/* ===== SLIDER ===== */
-const slides    = document.querySelectorAll('.slide');
-const dotsWrap  = document.getElementById('slider-dots');
-const btnPrev   = document.getElementById('prev');
-const btnNext   = document.getElementById('next');
-let atual       = 0;
-let timer;
-
-// Cria os dots dinamicamente
-slides.forEach((_, i) => {
+slides.forEach((_, index) => {
   const dot = document.createElement('button');
   dot.classList.add('slider-dot');
-  if (i === 0) dot.classList.add('ativo');
-  dot.addEventListener('click', () => irPara(i));
-  dotsWrap.appendChild(dot);
+
+  if(index === 0) {
+    dot.classList.add('ativo');
+  }
+
+  dot.addEventListener('click', () => {
+    showSlide(index);
+  });
+
+  dotsContainer.appendChild(dot);
 });
 
-function irPara(index) {
-  slides[atual].classList.remove('ativo');
-  dotsWrap.children[atual].classList.remove('ativo');
+const dots = document.querySelectorAll('.slider-dot');
 
-  atual = (index + slides.length) % slides.length;
+function showSlide(index) {
 
-  slides[atual].classList.add('ativo');
-  dotsWrap.children[atual].classList.add('ativo');
+  slides.forEach(slide => {
+    slide.classList.remove('ativo');
+  });
 
-  resetTimer();
+  dots.forEach(dot => {
+    dot.classList.remove('ativo');
+  });
+
+  slides[index].classList.add('ativo');
+  dots[index].classList.add('ativo');
+
+  current = index;
 }
 
-function resetTimer() {
-  clearInterval(timer);
-  timer = setInterval(() => irPara(atual + 1), 5000);
-}
+next.addEventListener('click', () => {
 
-btnPrev.addEventListener('click', () => irPara(atual - 1));
-btnNext.addEventListener('click', () => irPara(atual + 1));
+  current++;
 
-// Troca automática a cada 5 segundos
-resetTimer();
+  if(current >= slides.length) {
+    current = 0;
+  }
 
-// Suporte a swipe no mobile
-let touchStartX = 0;
-document.getElementById('hero-slider').addEventListener('touchstart', e => {
-  touchStartX = e.touches[0].clientX;
+  showSlide(current);
+
 });
-document.getElementById('hero-slider').addEventListener('touchend', e => {
-  const diff = touchStartX - e.changedTouches[0].clientX;
-  if (Math.abs(diff) > 50) irPara(diff > 0 ? atual + 1 : atual - 1);
+
+prev.addEventListener('click', () => {
+
+  current--;
+
+  if(current < 0) {
+    current = slides.length - 1;
+  }
+
+  showSlide(current);
+
+});
+
+setInterval(() => {
+
+  current++;
+
+  if(current >= slides.length) {
+    current = 0;
+  }
+
+  showSlide(current);
+
+}, 5000);
+
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('ativo');
 });

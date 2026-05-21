@@ -3,24 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academia</title>
+  <title>Personal Trainer</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<!-- ===== HERO SLIDER (navbar + imagem num bloco só) ===== -->
-<div class="hero-slider" id="hero-slider">
+<!-- =====================================
+NAVBAR + HERO SLIDER
+===================================== -->
+<div class="hero-slider">
 
-  <!-- SLIDES — troque os background-image no CSS pelos seus caminhos -->
   <div class="slide ativo"></div>
   <div class="slide"></div>
   <div class="slide"></div>
 
-  <!-- NAVBAR (flutua sobre o slider) -->
   <nav class="navbar">
-    <div class="nav-container container">
+    <div class="nav-container">
+
+      <a href="#" class="logo">
+        <img src="img/logo.png" alt="Logo">
+      </a>
 
       <div class="menu-toggle" id="menu-toggle">
         <span></span>
@@ -30,9 +37,9 @@
 
       <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#Diferenciais">Diferenciais</a></li>
-        <li><a href="#Sobre">Sobre</a></li>
-        <li><a href="#Planos">Planos</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#planos">Planos</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
@@ -40,26 +47,315 @@
     </div>
   </nav>
 
-  <!-- SETA ESQUERDA -->
-  <button class="slider-arrow prev" id="prev" aria-label="Anterior">
+  <button class="slider-arrow prev" id="prev">
     <i class="fa-solid fa-chevron-left"></i>
   </button>
 
-  <!-- SETA DIREITA -->
-  <button class="slider-arrow next" id="next" aria-label="Próximo">
+  <button class="slider-arrow next" id="next">
     <i class="fa-solid fa-chevron-right"></i>
   </button>
 
-  <!-- DOTS -->
   <div class="slider-dots" id="slider-dots"></div>
+
+  <div class="hero-content container">
+
+    <span class="hero-badge">RESULTADOS REAIS</span>
+
+    <h1>
+      TRANSFORME <br>
+      <span>SEU CORPO</span>
+    </h1>
+
+    <p>
+      Treinos personalizados para hipertrofia,
+      emagrecimento e performance.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#planos" class="btn-primary">
+        COMEÇAR AGORA
+      </a>
+
+      <a href="#sobre" class="btn-outline">
+        SAIBA MAIS
+      </a>
+    </div>
+
+    <div class="hero-stats">
+
+      <div class="stat">
+        <h3>+500</h3>
+        <span>Alunos transformados</span>
+      </div>
+
+      <div class="stat">
+        <h3>+8</h3>
+        <span>Anos de experiência</span>
+      </div>
+
+      <div class="stat">
+        <h3>100%</h3>
+        <span>Treinos personalizados</span>
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
 
-<!-- ===== RODAPÉ ===== -->
+<!-- =====================================
+DIFERENCIAIS
+===================================== -->
+<section class="diferenciais" id="diferenciais">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>DIFERENCIAIS</span>
+      <h2>O QUE VOCÊ VAI TER</h2>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="card">
+        <i class="fa-solid fa-dumbbell"></i>
+        <h3>Treinos Personalizados</h3>
+        <p>
+          Treinos desenvolvidos conforme seus objetivos.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <h3>Acompanhamento</h3>
+        <p>
+          Evolução acompanhada semanalmente.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-fire"></i>
+        <h3>Resultados Reais</h3>
+        <p>
+          Metodologia focada em transformação.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <h3>Suporte Online</h3>
+        <p>
+          Atendimento direto e suporte completo.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================
+SOBRE
+===================================== -->
+<section class="sobre" id="sobre">
+
+  <div class="container sobre-container">
+
+    <div class="sobre-imagem">
+      <img src="img/personal.png" alt="Personal Trainer">
+    </div>
+
+    <div class="sobre-texto">
+
+      <span>SOBRE O PERSONAL</span>
+
+      <h2>
+        Performance, disciplina
+        e transformação.
+      </h2>
+
+      <p>
+        Especialista em hipertrofia, emagrecimento
+        e condicionamento físico.
+      </p>
+
+      <div class="sobre-itens">
+
+        <div class="sobre-item">
+          <i class="fa-solid fa-check"></i>
+          <span>Treino Individualizado</span>
+        </div>
+
+        <div class="sobre-item">
+          <i class="fa-solid fa-check"></i>
+          <span>Metodologia Profissional</span>
+        </div>
+
+        <div class="sobre-item">
+          <i class="fa-solid fa-check"></i>
+          <span>Resultados Duradouros</span>
+        </div>
+
+      </div>
+
+      <a href="#contato" class="btn-primary">
+        FALE COMIGO
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================
+PLANOS
+===================================== -->
+<section class="planos" id="planos">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>PLANOS</span>
+      <h2>ESCOLHA SEU PLANO</h2>
+    </div>
+
+    <div class="planos-grid">
+
+      <div class="plano-card">
+        <h3>BÁSICO</h3>
+        <h2>R$ 129</h2>
+        <span>/ mês</span>
+
+        <ul>
+          <li>Treinos personalizados</li>
+          <li>Acompanhamento mensal</li>
+          <li>Suporte básico</li>
+        </ul>
+
+        <a href="#" class="btn-outline">ESCOLHER</a>
+      </div>
+
+      <div class="plano-card destaque">
+        <div class="tag">MAIS ESCOLHIDO</div>
+
+        <h3>PREMIUM</h3>
+        <h2>R$ 199</h2>
+        <span>/ mês</span>
+
+        <ul>
+          <li>Treinos personalizados</li>
+          <li>Acompanhamento semanal</li>
+          <li>Consultoria completa</li>
+          <li>Suporte via WhatsApp</li>
+        </ul>
+
+        <a href="#" class="btn-primary">ESCOLHER</a>
+      </div>
+
+      <div class="plano-card">
+        <h3>ONLINE</h3>
+        <h2>R$ 99</h2>
+        <span>/ mês</span>
+
+        <ul>
+          <li>Treinos digitais</li>
+          <li>Consultoria remota</li>
+          <li>Aplicativo de treino</li>
+        </ul>
+
+        <a href="#" class="btn-outline">ESCOLHER</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================
+DEPOIMENTOS
+===================================== -->
+<section class="depoimentos" id="depoimentos">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>DEPOIMENTOS</span>
+      <h2>RESULTADOS DOS ALUNOS</h2>
+    </div>
+
+    <div class="depoimentos-grid">
+
+      <div class="depoimento-card">
+        <p>
+          “Consegui perder 12kg e melhorar
+          totalmente minha autoestima.”
+        </p>
+
+        <h4>Lucas Martins</h4>
+      </div>
+
+      <div class="depoimento-card">
+        <p>
+          “Treinos extremamente profissionais
+          e acompanhamento excelente.”
+        </p>
+
+        <h4>Fernanda Souza</h4>
+      </div>
+
+      <div class="depoimento-card">
+        <p>
+          “A melhor decisão que tomei.
+          Resultados rápidos e reais.”
+        </p>
+
+        <h4>Rafael Lima</h4>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================
+CTA FINAL
+===================================== -->
+<section class="cta" id="contato">
+
+  <div class="container cta-container">
+
+    <div>
+      <span>COMECE AGORA</span>
+
+      <h2>
+        SUA TRANSFORMAÇÃO
+        COMEÇA HOJE.
+      </h2>
+
+      <p>
+        Fale agora no WhatsApp e comece sua evolução.
+      </p>
+
+      <a href="#" class="btn-primary">
+        <i class="fa-brands fa-whatsapp"></i>
+        FALE NO WHATSAPP
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
 <footer>
-  © 2026 Academia — Todos os direitos reservados
+  © 2026 Personal Trainer — Todos os direitos reservados.
 </footer>
 
 <script src="javascript/script.js"></script>
 </body>
 </html>
+

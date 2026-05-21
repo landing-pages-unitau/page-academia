@@ -1,68 +1,67 @@
 "use strict";
 
-/* ===== MENU MOBILE ===== */
-var toggle = document.getElementById('menu-toggle');
-var links = document.getElementById('nav-links');
-toggle.addEventListener('click', function () {
-  toggle.classList.toggle('open');
-  links.classList.toggle('ativo');
-});
-links.querySelectorAll('a').forEach(function (a) {
-  a.addEventListener('click', function () {
-    toggle.classList.remove('open');
-    links.classList.remove('ativo');
-  });
-});
-/* ===== SLIDER ===== */
-
 var slides = document.querySelectorAll('.slide');
-var dotsWrap = document.getElementById('slider-dots');
-var btnPrev = document.getElementById('prev');
-var btnNext = document.getElementById('next');
-var atual = 0;
-var timer; // Cria os dots dinamicamente
-
-slides.forEach(function (_, i) {
+var prev = document.getElementById('prev');
+var next = document.getElementById('next');
+var dotsContainer = document.getElementById('slider-dots');
+var current = 0;
+slides.forEach(function (_, index) {
   var dot = document.createElement('button');
   dot.classList.add('slider-dot');
-  if (i === 0) dot.classList.add('ativo');
+
+  if (index === 0) {
+    dot.classList.add('ativo');
+  }
+
   dot.addEventListener('click', function () {
-    return irPara(i);
+    showSlide(index);
   });
-  dotsWrap.appendChild(dot);
+  dotsContainer.appendChild(dot);
 });
+var dots = document.querySelectorAll('.slider-dot');
 
-function irPara(index) {
-  slides[atual].classList.remove('ativo');
-  dotsWrap.children[atual].classList.remove('ativo');
-  atual = (index + slides.length) % slides.length;
-  slides[atual].classList.add('ativo');
-  dotsWrap.children[atual].classList.add('ativo');
-  resetTimer();
+function showSlide(index) {
+  slides.forEach(function (slide) {
+    slide.classList.remove('ativo');
+  });
+  dots.forEach(function (dot) {
+    dot.classList.remove('ativo');
+  });
+  slides[index].classList.add('ativo');
+  dots[index].classList.add('ativo');
+  current = index;
 }
 
-function resetTimer() {
-  clearInterval(timer);
-  timer = setInterval(function () {
-    return irPara(atual + 1);
-  }, 5000);
-}
+next.addEventListener('click', function () {
+  current++;
 
-btnPrev.addEventListener('click', function () {
-  return irPara(atual - 1);
+  if (current >= slides.length) {
+    current = 0;
+  }
+
+  showSlide(current);
 });
-btnNext.addEventListener('click', function () {
-  return irPara(atual + 1);
-}); // Troca automática a cada 5 segundos
+prev.addEventListener('click', function () {
+  current--;
 
-resetTimer(); // Suporte a swipe no mobile
+  if (current < 0) {
+    current = slides.length - 1;
+  }
 
-var touchStartX = 0;
-document.getElementById('hero-slider').addEventListener('touchstart', function (e) {
-  touchStartX = e.touches[0].clientX;
+  showSlide(current);
 });
-document.getElementById('hero-slider').addEventListener('touchend', function (e) {
-  var diff = touchStartX - e.changedTouches[0].clientX;
-  if (Math.abs(diff) > 50) irPara(diff > 0 ? atual + 1 : atual - 1);
+setInterval(function () {
+  current++;
+
+  if (current >= slides.length) {
+    current = 0;
+  }
+
+  showSlide(current);
+}, 5000);
+var menuToggle = document.getElementById('menu-toggle');
+var navLinks = document.getElementById('nav-links');
+menuToggle.addEventListener('click', function () {
+  navLinks.classList.toggle('ativo');
 });
 //# sourceMappingURL=script.dev.js.map
