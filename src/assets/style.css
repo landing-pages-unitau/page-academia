@@ -1196,3 +1196,56 @@ RESPONSIVO
   }
 
 }
+
+/* =========================================
+FOOTER
+========================================= */
+
+.footer{
+  padding:30px 0;
+
+  background:#030303;
+
+  border-top:
+  1px solid rgba(255,255,255,.06);
+}
+
+.footer-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+.footer-logo img{
+  height:42px;
+  opacity:.9;
+}
+
+.footer p{
+  color:rgba(255,255,255,.6);
+
+  font-size:.95rem;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+  .footer-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .footer-logo img{
+    height:36px;
+  }
+
+  .footer p{
+    font-size:.9rem;
+    line-height:1.6;
+  }
+
+}
