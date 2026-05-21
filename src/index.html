@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Personal Trainer</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,16 +14,19 @@
 </head>
 <body>
 
-<!-- =====================================
-NAVBAR + HERO SLIDER
-===================================== -->
-<div class="hero-slider">
+<!-- =========================================
+NAVBAR + HERO
+========================================= -->
+<header class="hero-slider" id="home">
 
+  <!-- SLIDES -->
   <div class="slide ativo"></div>
   <div class="slide"></div>
   <div class="slide"></div>
 
+  <!-- NAVBAR -->
   <nav class="navbar">
+
     <div class="nav-container">
 
       <a href="#" class="logo">
@@ -40,13 +44,14 @@ NAVBAR + HERO SLIDER
         <li><a href="#diferenciais">Diferenciais</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#planos">Planos</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
 
     </div>
+
   </nav>
 
+  <!-- SETAS -->
   <button class="slider-arrow prev" id="prev">
     <i class="fa-solid fa-chevron-left"></i>
   </button>
@@ -55,58 +60,81 @@ NAVBAR + HERO SLIDER
     <i class="fa-solid fa-chevron-right"></i>
   </button>
 
+  <!-- DOTS -->
   <div class="slider-dots" id="slider-dots"></div>
 
+  <!-- HERO CONTENT -->
   <div class="hero-content container">
 
-    <span class="hero-badge">RESULTADOS REAIS</span>
+    <div class="hero-text">
 
-    <h1>
-      TRANSFORME <br>
-      <span>SEU CORPO</span>
-    </h1>
+      
 
-    <p>
-      Treinos personalizados para hipertrofia,
-      emagrecimento e performance.
-    </p>
+      <h1>
+        TRANSFORME <br>
+        <span>SEU CORPO</span>
+      </h1>
 
-    <div class="hero-buttons">
-      <a href="#planos" class="btn-primary">
-        COMEÇAR AGORA
-      </a>
+      <p>
+        Treinos personalizados para hipertrofia,
+        emagrecimento e performance.
+      </p>
 
-      <a href="#sobre" class="btn-outline">
-        SAIBA MAIS
-      </a>
+      <div class="hero-buttons">
+
+        <a href="#planos" class="btn-primary">
+          COMEÇAR AGORA
+        </a>
+
+        <a href="#sobre" class="btn-outline">
+          SAIBA MAIS
+        </a>
+
+      </div>
+
+      
+
     </div>
 
-    <div class="hero-stats">
+    <!-- HERO CARDS -->
+    <div class="hero-overlay-card">
 
-      <div class="stat">
-        <h3>+500</h3>
-        <span>Alunos transformados</span>
+      <div class="overlay-box">
+        <i class="fa-solid fa-dumbbell"></i>
+
+        <div>
+          <h4>Hipertrofia</h4>
+          <span>Treinos intensivos</span>
+        </div>
       </div>
 
-      <div class="stat">
-        <h3>+8</h3>
-        <span>Anos de experiência</span>
+      <div class="overlay-box">
+        <i class="fa-solid fa-fire"></i>
+
+        <div>
+          <h4>Emagrecimento</h4>
+          <span>Resultados reais</span>
+        </div>
       </div>
 
-      <div class="stat">
-        <h3>100%</h3>
-        <span>Treinos personalizados</span>
+      <div class="overlay-box">
+        <i class="fa-solid fa-heart-pulse"></i>
+
+        <div>
+          <h4>Performance</h4>
+          <span>Alta evolução</span>
+        </div>
       </div>
 
     </div>
 
   </div>
 
-</div>
+</header>
 
-<!-- =====================================
+<!-- =========================================
 DIFERENCIAIS
-===================================== -->
+========================================= -->
 <section class="diferenciais" id="diferenciais">
 
   <div class="container">
@@ -121,6 +149,7 @@ DIFERENCIAIS
       <div class="card">
         <i class="fa-solid fa-dumbbell"></i>
         <h3>Treinos Personalizados</h3>
+
         <p>
           Treinos desenvolvidos conforme seus objetivos.
         </p>
@@ -129,6 +158,7 @@ DIFERENCIAIS
       <div class="card">
         <i class="fa-solid fa-heart-pulse"></i>
         <h3>Acompanhamento</h3>
+
         <p>
           Evolução acompanhada semanalmente.
         </p>
@@ -137,6 +167,7 @@ DIFERENCIAIS
       <div class="card">
         <i class="fa-solid fa-fire"></i>
         <h3>Resultados Reais</h3>
+
         <p>
           Metodologia focada em transformação.
         </p>
@@ -145,6 +176,7 @@ DIFERENCIAIS
       <div class="card">
         <i class="fa-solid fa-mobile-screen"></i>
         <h3>Suporte Online</h3>
+
         <p>
           Atendimento direto e suporte completo.
         </p>
@@ -156,46 +188,112 @@ DIFERENCIAIS
 
 </section>
 
-<!-- =====================================
+<!-- =========================================
 SOBRE
-===================================== -->
+========================================= -->
 <section class="sobre" id="sobre">
 
   <div class="container sobre-container">
 
+    <!-- IMAGEM -->
     <div class="sobre-imagem">
-      <img src="img/personal.png" alt="Personal Trainer">
+
+      <div class="sobre-img-box">
+
+        <img src="img/personal.png" alt="Personal Trainer">
+
+        <div class="sobre-badge">
+          <i class="fa-solid fa-medal"></i>
+
+          <div>
+            <h4>+8 anos</h4>
+            <span>de experiência</span>
+          </div>
+        </div>
+
+      </div>
+
     </div>
 
+    <!-- TEXTO -->
     <div class="sobre-texto">
 
-      <span>SOBRE O PERSONAL</span>
+      <span class="section-mini-title">
+        SOBRE O PERSONAL
+      </span>
 
       <h2>
-        Performance, disciplina
-        e transformação.
+        Performance,
+        disciplina e
+        <span>transformação real.</span>
       </h2>
 
       <p>
-        Especialista em hipertrofia, emagrecimento
-        e condicionamento físico.
+        Especialista em hipertrofia, emagrecimento e
+        condicionamento físico com metodologia focada
+        em resultados duradouros.
       </p>
 
+      <!-- ITENS -->
       <div class="sobre-itens">
 
         <div class="sobre-item">
-          <i class="fa-solid fa-check"></i>
-          <span>Treino Individualizado</span>
+          <div class="sobre-icon">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+
+          <div>
+            <h4>Treino Individualizado</h4>
+            <span>
+              Estratégias personalizadas para seus objetivos.
+            </span>
+          </div>
         </div>
 
         <div class="sobre-item">
-          <i class="fa-solid fa-check"></i>
-          <span>Metodologia Profissional</span>
+          <div class="sobre-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+
+          <div>
+            <h4>Evolução Contínua</h4>
+            <span>
+              Acompanhamento profissional da sua evolução.
+            </span>
+          </div>
         </div>
 
         <div class="sobre-item">
-          <i class="fa-solid fa-check"></i>
-          <span>Resultados Duradouros</span>
+          <div class="sobre-icon">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+
+          <div>
+            <h4>Alta Performance</h4>
+            <span>
+              Metodologia focada em transformação física.
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- STATS -->
+      <div class="sobre-stats">
+
+        <div class="sobre-stat">
+          <h3>500+</h3>
+          <span>Alunos</span>
+        </div>
+
+        <div class="sobre-stat">
+          <h3>98%</h3>
+          <span>Satisfação</span>
+        </div>
+
+        <div class="sobre-stat">
+          <h3>24h</h3>
+          <span>Suporte</span>
         </div>
 
       </div>
@@ -210,63 +308,149 @@ SOBRE
 
 </section>
 
-<!-- =====================================
+<!-- =========================================
 PLANOS
-===================================== -->
+========================================= -->
 <section class="planos" id="planos">
 
   <div class="container">
 
     <div class="section-title">
+
       <span>PLANOS</span>
-      <h2>ESCOLHA SEU PLANO</h2>
+
+      <h2>
+        Escolha seu plano ideal
+      </h2>
+
     </div>
 
     <div class="planos-grid">
 
+      <!-- PLANO -->
       <div class="plano-card">
+
         <h3>BÁSICO</h3>
-        <h2>R$ 129</h2>
-        <span>/ mês</span>
+
+        <div class="plano-preco">
+          <h2>R$129</h2>
+          <span>/mês</span>
+        </div>
+
+        <p>
+          Ideal para quem deseja começar sua transformação.
+        </p>
 
         <ul>
-          <li>Treinos personalizados</li>
-          <li>Acompanhamento mensal</li>
-          <li>Suporte básico</li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Treinos personalizados
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Avaliação física
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Suporte mensal
+          </li>
+
         </ul>
 
-        <a href="#" class="btn-outline">ESCOLHER</a>
+        <a href="#" class="btn-outline">
+          COMEÇAR
+        </a>
+
       </div>
 
+      <!-- PREMIUM -->
       <div class="plano-card destaque">
-        <div class="tag">MAIS ESCOLHIDO</div>
+
+        <div class="plano-tag">
+          MAIS ESCOLHIDO
+        </div>
 
         <h3>PREMIUM</h3>
-        <h2>R$ 199</h2>
-        <span>/ mês</span>
+
+        <div class="plano-preco">
+          <h2>R$199</h2>
+          <span>/mês</span>
+        </div>
+
+        <p>
+          Acompanhamento completo para máxima evolução.
+        </p>
 
         <ul>
-          <li>Treinos personalizados</li>
-          <li>Acompanhamento semanal</li>
-          <li>Consultoria completa</li>
-          <li>Suporte via WhatsApp</li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Treinos personalizados
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Consultoria completa
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Suporte via WhatsApp
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Ajustes semanais
+          </li>
+
         </ul>
 
-        <a href="#" class="btn-primary">ESCOLHER</a>
+        <a href="#" class="btn-primary">
+          COMEÇAR
+        </a>
+
       </div>
 
+      <!-- ONLINE -->
       <div class="plano-card">
+
         <h3>ONLINE</h3>
-        <h2>R$ 99</h2>
-        <span>/ mês</span>
+
+        <div class="plano-preco">
+          <h2>R$99</h2>
+          <span>/mês</span>
+        </div>
+
+        <p>
+          Consultoria online para treinar de qualquer lugar.
+        </p>
 
         <ul>
-          <li>Treinos digitais</li>
-          <li>Consultoria remota</li>
-          <li>Aplicativo de treino</li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Aplicativo de treino
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Consultoria remota
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Atualizações mensais
+          </li>
+
         </ul>
 
-        <a href="#" class="btn-outline">ESCOLHER</a>
+        <a href="#" class="btn-outline">
+          COMEÇAR
+        </a>
+
       </div>
 
     </div>
@@ -275,87 +459,67 @@ PLANOS
 
 </section>
 
-<!-- =====================================
-DEPOIMENTOS
-===================================== -->
-<section class="depoimentos" id="depoimentos">
+<!-- =========================================
+CONTATO / CTA
+========================================= -->
+<section class="contato" id="contato">
 
-  <div class="container">
+  <div class="container contato-container">
 
-    <div class="section-title">
-      <span>DEPOIMENTOS</span>
-      <h2>RESULTADOS DOS ALUNOS</h2>
-    </div>
+    <div class="contato-texto">
 
-    <div class="depoimentos-grid">
-
-      <div class="depoimento-card">
-        <p>
-          “Consegui perder 12kg e melhorar
-          totalmente minha autoestima.”
-        </p>
-
-        <h4>Lucas Martins</h4>
-      </div>
-
-      <div class="depoimento-card">
-        <p>
-          “Treinos extremamente profissionais
-          e acompanhamento excelente.”
-        </p>
-
-        <h4>Fernanda Souza</h4>
-      </div>
-
-      <div class="depoimento-card">
-        <p>
-          “A melhor decisão que tomei.
-          Resultados rápidos e reais.”
-        </p>
-
-        <h4>Rafael Lima</h4>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =====================================
-CTA FINAL
-===================================== -->
-<section class="cta" id="contato">
-
-  <div class="container cta-container">
-
-    <div>
-      <span>COMECE AGORA</span>
+      <span>
+        COMECE SUA EVOLUÇÃO
+      </span>
 
       <h2>
-        SUA TRANSFORMAÇÃO
-        COMEÇA HOJE.
+        Sua transformação
+        começa hoje.
       </h2>
 
       <p>
-        Fale agora no WhatsApp e comece sua evolução.
+        Entre em contato agora mesmo e descubra
+        como alcançar o físico que você deseja.
       </p>
 
-      <a href="#" class="btn-primary">
+      <div class="contato-info">
+
+        <div class="contato-item">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>(11) 99999-9999</span>
+        </div>
+
+        <div class="contato-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>contato@personal.com</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="contato-card">
+
+      <h3>
+        Fale agora comigo
+      </h3>
+
+      <p>
+        Atendimento rápido e personalizado.
+      </p>
+
+      <a href="#" class="btn-primary contato-btn">
         <i class="fa-brands fa-whatsapp"></i>
-        FALE NO WHATSAPP
+        CHAMAR NO WHATSAPP
       </a>
+
     </div>
 
   </div>
 
 </section>
-
-<footer>
-  © 2026 Personal Trainer — Todos os direitos reservados.
-</footer>
 
 <script src="javascript/script.js"></script>
 </body>
 </html>
-
